@@ -32,10 +32,11 @@ public class EmployeeResource {
     }
     @PostMapping
     public Employee addEmployee(@RequestBody Employee employee)
+
     {
        return  employeeService.addEmployee(employee);
     }
-    @DeleteMapping({"id"})
+    @DeleteMapping("{id}")
     public Employee deleteEmployee(@PathVariable int id)
     {
         return employeeService.deleteEmployee(id);
